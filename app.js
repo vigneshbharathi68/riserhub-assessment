@@ -1,8 +1,14 @@
 let app = Vue.createApp({
-    data: () => {
-        return {
-            data: "hello world"
-        }
+  data: () => {
+    return {
+      menus: [ 
+        {name: "Home", icon: "/"},
+        {name: "Home", icon: "/"},
+        {name: "Home", icon: "/"},
+        {name: "Home", icon: "/"},
+        {name: "Home", icon: "/"},
+      ]
     }
+  }
 })
 app.mount('#app')
