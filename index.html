@@ -30,10 +30,26 @@
 				</ul>
 			</div>
     </nav>
-    <main class="w-5/6 flex justify-center items-center">
-      <div class="card w-56 h-28 p-2">
-        <img class="w-8 h-8 " src="./assets/img/roi_income.svg" alt="" srcset="">
+    <main class="w-5/6">
+      <div class="dashboard-header">
+        <h1> Good Morning Grace </h1>
       </div>
+      <div class="dashboard-header">
+        <div v-for="(data, index) in cardItems" :key="index" class="card p-3">
+          <div class="card-header">
+            <img :src="data.headIconPath" alt="" />
+            <img :src="data.mainIconPath" alt="" />
+          </div>
+          <div class="card-text">
+            <p class="text-gray-600"> {{ data.titleText }} </p>
+            <h1 class="font-bold text-3xl">{{ data.numText }}  </h1>
+          </div>
+        </div>
+
+      </div>
+      <!-- <button class="primary-button text-white px-4 py-2">
+        Add Fund
+      </button> -->
     </main>
 	</div>
     <!-- link app.js here -->
